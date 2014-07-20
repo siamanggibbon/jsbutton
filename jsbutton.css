@@ -1,0 +1,24 @@
+input[type="button"] {
+    width: 150px;
+    height: 50px;
+}
+
+
+#btn {
+    -webkit-transition: background-image;
+    transition: background-image;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    background: -webkit-radial-gradient(circle, red 50%, blue 51%);
+    background: radial-gradient(circle, red 00%, blue 0%);
+    color: white;
+}
+
+
+#btn-click {
+    -webkit-transition: background-image;
+    transition: background-image;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    background-image: -webkit-radial-gradient(50% 50%, circle, blue, red);
+}
