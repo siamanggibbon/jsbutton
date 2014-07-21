@@ -1,19 +1,24 @@
+// jsbutton.js
+
 var element = document.getElementById("btn");
 element.onclick = function(e) {
-    var counter = 0;
-    var next = 1;
+    var blue = 1;
     var that = this;
-
+    var reverse = false;
     var change = setInterval(function(){
-        that.style.background = "radial-gradient(circle, red " + counter + "%, blue " + next + "%)";
-        counter+= 3;
-        next+= 3;
-        if (counter == 100) {
+        that.style.background = "radial-gradient(circle, red " + blue + "%, blue " + (blue + 1) + "%)";
+        if (reverse) {
+            blue -= 3;
+        } else {
+            blue += 3;
+            if (blue > 100) {
+                reverse = true;
+            }
+        } 
+        if (blue < -2) {
             clearInterval(change);
-            console.log("stopped");
         }
-        console.log(counter);
-    }, 1);
+    }, 2);
 };
 
 
